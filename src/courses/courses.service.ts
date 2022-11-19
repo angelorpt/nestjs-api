@@ -34,10 +34,7 @@ export class CoursesService {
 
   update(id: string, udpateCourseDto: any) {
     const index = this.getIndexById(Number(id));
-    this.courses[index] = {
-      ...this.courses[index],
-      ...udpateCourseDto,
-    };
+    this.courses[index] = udpateCourseDto;
     return this.courses[index];
   }
 

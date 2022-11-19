@@ -1,0 +1,38 @@
+@baseUrl = http://localhost:3000
+
+###
+
+GET {{baseUrl}}/courses
+
+###
+
+GET {{baseUrl}}/courses/1
+
+
+###
+
+POST {{baseUrl}}/courses/
+Content-Type: application/json; charset=utf-8
+
+{
+  "id": 2,
+  "name": "Curso Nest.js",
+  "description": "Nest.js Completo",
+  "price": 50.99
+}
+
+###
+
+PATCH {{baseUrl}}/courses/1
+Content-Type: application/json; charset=utf-8
+
+{
+  "id": 3,
+  "name": "Curso Vue.js",
+  "description": "Vue.js Completo",
+  "price": 99.99
+}
+
+###
+
+DELETE {{baseUrl}}/courses/3
