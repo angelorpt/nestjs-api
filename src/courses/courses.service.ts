@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { Course } from './entities/course.entity';
 
 @Injectable()
@@ -13,7 +13,14 @@ export class CoursesService {
   ];
 
   private getCourseById(id: number): Course {
-    return this.courses.find((course: Course) => course.id === id);
+    const index = this.getIndexById(id);
+    if (index < 0) {
+      throw new HttpException(
+        `Course ${id} does not exist`,
+        HttpStatus.NOT_FOUND,
+      );
+    }
+    return this.courses[index];
   }
 
   private getIndexById(id: number): number {

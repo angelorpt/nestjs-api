@@ -6,7 +6,7 @@ GET {{baseUrl}}/courses
 
 ###
 
-GET {{baseUrl}}/courses/1
+GET {{baseUrl}}/courses/2
 
 
 ###
