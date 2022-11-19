@@ -23,14 +23,14 @@ Content-Type: application/json; charset=utf-8
 
 ###
 
-PATCH {{baseUrl}}/courses/2
+PATCH {{baseUrl}}/courses/3
 Content-Type: application/json; charset=utf-8
 
 {
-  "id": 3,
+  "id": 2,
   "name": "Curso Vue.js",
   "description": "Vue.js Completo",
-  "price": 99.99
+  "tags": ["vue"]
 }
 
 ###
